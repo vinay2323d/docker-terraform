@@ -10,7 +10,7 @@ terraform {
 provider "docker" {}
 
 resource "docker_image" "wep_terraform" {
-  name         = "vinayvicky/wep_terraform:5"
+  name         = "vinayvicky/wep_terraform:6"
   keep_locally = false
 }
 
