@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages{
-        stage('SCM') {
-            steps {
-                git 'https://github.com/vinay2323d/docker-terraform.git'
-	     }
-	}
+        #stage('SCM') {
+        #    steps {
+        #        git 'https://github.com/vinay2323d/docker-terraform.git'
+	#     }
+	#}
         stage('Build Docker Image'){
             steps{
                 sh "docker build -t vinayvicky/wep_terraform:${BUILD_NUMBER} ."
