@@ -9,16 +9,17 @@ terraform {
 
 provider "docker" {}
 
-resource "docker_image" "vinayvicky/wep_terraform" {
-  name         = "vinayvicky/wep_terraform:latest"
+resource "docker_image" "wep_terraform" {
+  name         = "vinayvicky/wep_terraform:2"
   keep_locally = false
 }
 
-resource "docker_container" "vinayvicky/wep_terraform" {
-  image = docker_image.vinayvicky/wep_terraform.latest
+resource "docker_container" "wep_terraform" {
+  image = docker_image.wep_terraform.latest
   name  = "tutorial"
   ports {
     internal = 80
     external = 8080
   }
 }
+
