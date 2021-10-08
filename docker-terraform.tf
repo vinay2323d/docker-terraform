@@ -18,8 +18,7 @@ resource "docker_container" "wep_terraform" {
   image = docker_image.wep_terraform.latest
   name  = "tutorial"
   ports {
-    internal = 8000
+    internal = 80
     external = 8000
   }
 }
-
