@@ -10,7 +10,7 @@ terraform {
 provider "docker" {}
 
 resource "docker_image" "wep_terraform" {
-  name         = "vinayvicky/wep_terraform:4"
+  name         = "vinayvicky/wep_terraform:5"
   keep_locally = false
 }
 
@@ -18,7 +18,7 @@ resource "docker_container" "wep_terraform" {
   image = docker_image.wep_terraform.latest
   name  = "tutorial"
   ports {
-    internal = 80
+    internal = 8000
     external = 8000
   }
 }
