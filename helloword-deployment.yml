@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloword-deployment
+  labels:
+    app: helloword
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloword
+  template:
+    metadata:
+      labels:
+        app: helloword
+    spec:
+      containers:
+      - name: helloword
+        image: vinayvicky/wep_terraform:ImageTag
+        ports:
+        - name: helloword-port
+          containerPort: 8080
+
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: helloword-service
+spec:
+  ports:
+  - port: 84
+    targetPort: helloword-port
+    protocol: TCP
+  selector:
+    app: vedika
+  type: NodePort
