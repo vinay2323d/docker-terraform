@@ -33,5 +33,5 @@ spec:
     targetPort: helloword-port
     protocol: TCP
   selector:
-    app: vedika
+    app: helloword
   type: NodePort
