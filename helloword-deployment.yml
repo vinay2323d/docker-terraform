@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: helloword
-        image: vinayvicky/wep_terraform:2ImageTag
+        image: vinayvicky/wep_terraform:3ImageTag
         ports:
         - name: helloword-port
           containerPort: 8080
